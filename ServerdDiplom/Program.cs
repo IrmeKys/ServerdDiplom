@@ -3,7 +3,7 @@ using ServerdDiplom.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DickShitDB");
+var connectionString = builder.Configuration.GetConnectionString("DiplomDB");
 builder.Services.AddDbContext<DiplomDbContext>(options =>options.UseSqlServer(connectionString));
 
 // Add services to the container.

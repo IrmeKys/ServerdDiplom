@@ -17,11 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
     <Folder Include="Entity\" />
     <Folder Include="Migrations\" />
     <Folder Include="Model\" />
-    <Folder Include="DickShitCS\" />
   </ItemGroup>
 
 </Project>

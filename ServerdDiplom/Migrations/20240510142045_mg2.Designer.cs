@@ -11,8 +11,8 @@ using ServerdDiplom.Context;
 namespace ServerdDiplom.Migrations
 {
     [DbContext(typeof(DiplomDbContext))]
-    [Migration("20240420173919_pizda1")]
-    partial class pizda1
+    [Migration("20240510142045_mg2")]
+    partial class mg2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

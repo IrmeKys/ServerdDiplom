@@ -5,7 +5,7 @@
 namespace ServerdDiplom.Migrations
 {
     /// <inheritdoc />
-    public partial class pizda1 : Migration
+    public partial class mg2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
