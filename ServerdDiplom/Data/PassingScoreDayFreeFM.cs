@@ -5,7 +5,7 @@ namespace ServerdDiplom.Data
     public class PassingScoreDayFreeFM
     {
         [Key]
-        public required int ScoreFreeId { get; set; }
+        public  int ScoreFreeId { get; set; }
         [Range(130, 395, ErrorMessage = "Введите число от 130 до 395")]
         public int PassingScoreValueDayFree { get; set;}
         [Range(130, 380, ErrorMessage = "Введите число от 130 до 380")]

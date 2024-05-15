@@ -8,10 +8,10 @@ namespace ServerdDiplom.Data
     public class University_Faculty
     {
         [MaxLength(200)]
-        public string UniversityId { get; set; } = null!;
+        public int UniversityId { get; set; }
         [MaxLength(200)]
-        public string FacultyId {  get; set; } = null!;
-        //public University UniversityNameMTM { get; set; } = null!;
-        //public Faculty FacultyNameMTM { get; set; } = null!;
+        public University University { get; set; } = null!;
+        public int FacultyId {  get; set; }
+        public Faculty Faculty { get; set; } = null!;
     }
 }

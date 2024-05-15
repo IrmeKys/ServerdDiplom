@@ -7,9 +7,9 @@ namespace ServerdDiplom.Data
     public class Speciality_PassingScoreForMoney
     {
         [MaxLength(200)]
-        public string SpecialityId { get; set; }=null!;
-        public required int ScoreForMoneyId { get; set; }
-        //public Speciality Speciality_Name { get; set; } = null!;
-        //public PassingScoreExtramuralFreeFM Score_ForMoney { get; set; } = null!;
+        public int SpecialityId { get; set; }
+        public Speciality Speciality { get; set; } = null!;
+        public  int ScoreForMoneyId { get; set; }
+        public PassingScoreExtramuralFreeFM ScoreExtramuralFreeFM { get; set; } = null!;
     }
 }

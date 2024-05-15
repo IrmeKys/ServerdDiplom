@@ -7,11 +7,11 @@ namespace ServerdDiplom.Data
     public class Speciality_Exams
     {
         [MaxLength(200)]
-        public string SpecialityId { get; set; } = null!;
+        public int SpecialityId { get; set; }
         [MaxLength(100)]
-        public string ExamsId {  get; set; } = null!;
-        //public Exams ExamsName { get; set; } = null!;
-        //public Speciality SpecialityName { get; set; } = null!;
- 
+        public Speciality Speciality { get; set; } = null!;
+        public int ExamsId {  get; set; }
+        public Exams Exams { get; set; }=null!;
+
     }
 }

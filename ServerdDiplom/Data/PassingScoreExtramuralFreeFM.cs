@@ -5,7 +5,7 @@ namespace ServerdDiplom.Data
     public class PassingScoreExtramuralFreeFM
     {
         [Key]
-        public required int ScoreForMoneyId { get; set; }
+        public  int ScoreForMoneyId { get; set; }
         [Range(130,350,ErrorMessage ="Введите число от 130 до 350")]
         public int PassingScoreValueExtramuralFree { get; set; }
 
