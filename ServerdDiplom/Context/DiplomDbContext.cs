@@ -22,14 +22,12 @@ public partial class DiplomDbContext : DbContext
     public DbSet<Exams> Exams { get; set; }
     public DbSet<Faculty> Faculties { get; set; }
     public DbSet<PassingScoreDayFreeFM> PassingScoreDayFreeFMs { get; set; }
-    public DbSet<PassingScoreExtramuralFreeFM> PassingScoreExtramuralFreeFMs { get; set; }
     public DbSet<Speciality> Speciality { get; set; }
     public DbSet<TrainingPeriod> TrainingPeriods { get; set; }
     public DbSet<University> Universities { get; set; }
     public DbSet<Speciality_Exams> Speciality_Exams { get; set; }
     public DbSet<Speciality_Faculty> Speciality_Faculties { get; set; }
     public DbSet<Speciality_PassingScoreFree> Speciality_PassingScoreFrees { get; set; }
-    public DbSet<Speciality_PassingScoreForMoney> Speciality_PassingScoreForMoney { get; set; }
     public DbSet<University_Faculty> University_Faculties { get; set; }
 
 

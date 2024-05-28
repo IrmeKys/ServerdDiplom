@@ -13,7 +13,6 @@ namespace ServerdDiplom.Data
         public List<Speciality_Faculty>? Speciality_Faculties { get;  } = [];
         public List<Speciality_Exams>? Speciality_Exams { get; } = [];
         public List<Speciality_PassingScoreFree>? Speciality_PassingScoreFrees { get; } = [];
-        public List<Speciality_PassingScoreForMoney>? Speciality_PassingScoreForMoney { get; } = [];
     }
 }
  

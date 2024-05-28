@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using ServerdDiplom.ChlenZhopa;
 using ServerdDiplom.Context;
+using ServerdDiplom.Dota;
 using ServerdDiplom.HyuPizda;
 using ServerdDiplom.Services;
+using ServerdDiplom.ZalupaVagina;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +18,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPassingScoreDayFreeFMService, PassingScoreDayFreeFMService>();
-builder.Services.AddScoped<IPassingScoreExtramuralFreeFMService, PassingScoreExtramuralFreeFMService>();
 builder.Services.AddScoped<IExamsService, ExamsService>();
 builder.Services.AddScoped<IRegionService, RegionService>();
 builder.Services.AddScoped<ITrainingPeriodService, TrainingPeriodService>();
@@ -29,9 +30,10 @@ builder.Services.AddScoped<IUniversityFacultyService, UniversityFacultyService>(
 builder.Services.AddScoped<ISpecialityExamsService, SpecialityExamsService>();
 builder.Services.AddScoped<ISpecialityFacultyService, SpecialityFacultyService>();
 builder.Services.AddScoped<ISpecialityPassingScoreFreeService, SpecialityPassingScoreFreeService>();
-builder.Services.AddScoped<ISpecialityPassingScoreForMoneyService, SpecialityPassingScoreForMoneyService>();
 builder.Services.AddScoped<IUniversityAdmissionService, UniversityAdmissionService>();
 builder.Services.AddScoped<IUniversityInfoService, UniversityInfoService>();
+builder.Services.AddScoped<IUniversitySearchService, UniversitySearchService>();
+builder.Services.AddScoped<ISpecialitySearchService, SpecialitySearchService>();
 
 var app = builder.Build();
 

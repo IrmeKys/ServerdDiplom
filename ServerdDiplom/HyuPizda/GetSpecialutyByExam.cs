@@ -7,13 +7,13 @@ namespace ServerdDiplom.HyuPizda
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HyuPizdaController : ControllerBase
+    public class GetSpecialutyByExam : ControllerBase
     {
         private readonly IUniversityAdmissionService _universityAdmissionService;
         private readonly MainResponse mainResponse;
 
 
-        public HyuPizdaController(IUniversityAdmissionService universityAdmissionService)
+        public GetSpecialutyByExam(IUniversityAdmissionService universityAdmissionService)
         {
             _universityAdmissionService = universityAdmissionService;
         }

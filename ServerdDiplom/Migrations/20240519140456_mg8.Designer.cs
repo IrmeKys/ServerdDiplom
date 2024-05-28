@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ServerdDiplom.Context;
 
@@ -11,9 +12,11 @@ using ServerdDiplom.Context;
 namespace ServerdDiplom.Migrations
 {
     [DbContext(typeof(DiplomDbContext))]
-    partial class DiplomDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240519140456_mg8")]
+    partial class mg8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

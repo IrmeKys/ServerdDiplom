@@ -9,8 +9,8 @@ namespace ServerdDiplom.ChlenZhopa
         public string UniversityLink { get; set; } = null!;
         public string FacultyName { get; set; } = null!;
         public string Town_name { get; set; } = null!;
-        public SpecialityInfoDTO SpecialityInfo { get; set; }
-        public ComissionNumberInfoDTO ComissionNumberInfo { get; set; }
+        public SpecialityInfoDTO? SpecialityInfo { get; set; }
+        public ComissionNumberInfoDTO? ComissionNumberInfo { get; set; }
     }
 
 }
