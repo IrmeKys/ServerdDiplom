@@ -8,7 +8,9 @@ namespace ServerdDiplom.Services
         Task<MainResponse> UpdateUniversity(UpdateUniversityDTO updateUniversityDTO);
         Task<MainResponse> DeleteUniversity(DeleteUniversityDTO deleteUniversityDTO);
         Task<MainResponse> GetAllUniversity();
-        Task<SingleUniversityResponse> GetUniversityByName(string University_Name);
+        public Task<MainResponse> GetAllUniversityNames();
+
+		Task<SingleUniversityResponse> GetUniversityByName(string University_Name);
 
 
     }

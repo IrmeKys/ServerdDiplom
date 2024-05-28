@@ -1,9 +1,11 @@
-﻿using ServerdDiplom.Model;
+﻿using ServerdDiplom.HyuPizda;
 
 namespace ServerdDiplom.ZalupaVagina
 {
-    public interface IUniversitySearchService
-    {
-        Task<IEnumerable<SearchUniversityDTO>> SearchUniversitiesAsync(string searchTerm);
-    }
+	public interface IUniversitySearchService
+	{
+		public Task<List<UniversityAdmissionResponseDTO>> SearchUniversitiesAsync(string searchTerm);
+
+
+	}
 }

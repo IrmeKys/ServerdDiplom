@@ -2,10 +2,11 @@
 using ServerdDiplom.Model.DTO;
 using ServerdDiplom.Model;
 using Microsoft.EntityFrameworkCore;
+using ServerdDiplom.HyuPizda;
 
 namespace ServerdDiplom.ZalupaVagina
 {
-    public class UniversitySearchService:IUniversitySearchService
+    public class UniversitySearchService : IUniversitySearchService
     {
         private readonly DiplomDbContext _context;
 
@@ -14,21 +15,19 @@ namespace ServerdDiplom.ZalupaVagina
             _context = context;
         }
 
-        public async Task<IEnumerable<SearchUniversityDTO>> SearchUniversitiesAsync(string searchTerm)
+        public async Task<List<UniversityAdmissionResponseDTO>> SearchUniversitiesAsync(string searchTerm)
         {
             return await _context.Universities
                 .Where(u => u.UniversityName.Contains(searchTerm))
-                .Select(u => new SearchUniversityDTO
-                {
+                .Select(u => new UniversityAdmissionResponseDTO
+				{
                     UniversityName = u.UniversityName,
-                    UniversityDescription = u.UniversityDescription,
-                    UniversityLink = u.UniversityLink,
-                    Faculties = u.University_Faculties.Select(uf => new SearchFacultyDTO
+                    Faculties = u.University_Faculties.Select(uf => new NewFacultyDTO
                     {
                         FacultyName = uf.Faculty.FacultyName,
-                        Specialities = uf.Faculty.Speciality_Faculties.Select(sf => new SearchSpecialityDTO
+                        Specialties = uf.Faculty.Speciality_Faculties.Select(sf => new NewSpecialityDTO
                         {
-                            SpecialityName = sf.Speciality.SpecialityName
+                            SpecialtyName = sf.Speciality.SpecialityName
                         }).ToList()
                     }).ToList()
                 }).ToListAsync();

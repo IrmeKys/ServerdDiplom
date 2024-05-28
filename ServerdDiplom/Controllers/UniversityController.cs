@@ -35,7 +35,21 @@ namespace ServerdDiplom.Controllers
             }
         }
 
-        [HttpGet("GetUniversityByName")]
+		[HttpGet("GetAllUniversityNames")]
+		public async Task<IActionResult> GetAllUniversityNames()
+		{
+			try
+			{
+				var response = await _universityService.GetAllUniversityNames();
+				return Ok(response);
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(ex);
+			}
+		}
+
+		[HttpGet("GetUniversityByName")]
         public async Task<IActionResult> GetUniversityByName(string University_Name)
         {
             try

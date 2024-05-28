@@ -1,4 +1,5 @@
-﻿using ServerdDiplom.Model;
+﻿using ServerdDiplom.HyuPizda;
+using ServerdDiplom.Model;
 using ServerdDiplom.ZalupaVagina;
 
 namespace ServerdDiplom.Dota
@@ -6,6 +7,8 @@ namespace ServerdDiplom.Dota
     public interface ISpecialitySearchService
     {
 
-            Task<IEnumerable<SearchUniversityDTO>> SearchUniversitiesBySpecialityAsync(string searchTerm);
-    }
+		public Task<List<UniversityAdmissionResponseDTO>> SearchUniversitiesBySpecialityAsync(string searchTerm);
+
+
+	}
 }

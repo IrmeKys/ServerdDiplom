@@ -133,7 +133,30 @@ namespace ServerdDiplom.Services
             return response;
         }
 
-        public async Task<SingleUniversityResponse> GetUniversityByName(string University_Name)
+		public async Task<MainResponse> GetAllUniversityNames()
+		{
+			var response = new MainResponse();
+			try
+			{
+                var list = await _context.Universities.ToListAsync();
+                var names = new List<string>();
+                foreach (var item in list)
+                {
+                    names.Add(item.UniversityName);
+                }
+                response.Content = names;
+				response.IsSuccess = true;
+
+			}
+			catch (Exception ex)
+			{
+				response.ErrorMessage = ex.Message;
+				response.IsSuccess = false;
+			}
+			return response;
+		}
+
+		public async Task<SingleUniversityResponse> GetUniversityByName(string University_Name)
         {
             var response = new SingleUniversityResponse();
             try
